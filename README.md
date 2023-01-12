@@ -1,11 +1,11 @@
 
 # FishShop
 
-Création d'un site e-commerce de vente de poissons d'ornement dans le cadre de ma formation "Développeur Web et Web Mobile" en janvier 2023.
+E-shop for selling ornamental fishes created with React Js during my classroom "Developper Web and Mobile Web" in January 2023.
 
-Création dans le cadre d'un projet, sans utilisation commerciale.
+Created for a project, without commercial use.
 
-Textes et images provenant de https://www.floraquatic.com/
+Texts and images from https://www.floraquatic.com/
 
 
 ## Screenshots
@@ -17,12 +17,12 @@ Textes et images provenant de https://www.floraquatic.com/
 
 ## Installation
 
-Copier le projet au format à partir du lien suivant :
+Copy the project from the link below :
 https://github.com/AmandineDubreuil/fishshop
 
-Dézippez le dans votre dossier de travail.
+Unzip it in your working folder.
 
-Installez les dépendances avec la commande suivante :
+Install with the command below :
 
 ```bash
   npm update
@@ -34,8 +34,6 @@ Installez les dépendances avec la commande suivante :
   
 ```
 
-
-    
     
 ## Tech Stack
 
@@ -46,9 +44,9 @@ Installez les dépendances avec la commande suivante :
 
 ## Usage/Examples
 
-Création uniquement de la page d'articles et de la modale panier. Les autres composants ne sont actuelement pas créés.
+I only have created the articles sheet and the cart modal. The other components are not created yet.
 
-- Création d'un menu
+- Menu creation
 ![App Screenshot](https://zupimages.net/up/23/02/oxwf.png)
 
 ```javascript
@@ -112,7 +110,7 @@ function Menu() {
 ```
 
 
-- Création d'une card (poisson d'aquarium) avec image, description et prix
+- Creation of a card (ornamental fish) with image, description and price
 ![App Screenshot](https://zupimages.net/up/23/02/pewr.png)
 
 ```javascript
@@ -147,7 +145,7 @@ function Card(props) {
 
 ```
 
-- Affichage des produits 
+- Display products
 ![App Screenshot](https://zupimages.net/up/23/02/dwtd.png)
 
 
@@ -166,7 +164,7 @@ function CardFrame(props) {
 }
 ```
 
-- Modale panier pour ajouter des produits et passer une commande
+- Cart Modal 
 
 ![App Screenshot](https://zupimages.net/up/23/02/411e.png)
 
