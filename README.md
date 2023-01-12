@@ -1,9 +1,11 @@
 
 # FishShop
 
-Création d'un site e-commerce de vente de poissons d'ornement dans le cadre de ma formation en janvier 2023.
+Création d'un site e-commerce de vente de poissons d'ornement dans le cadre de ma formation "Développeur Web et Web Mobile" en janvier 2023.
 
+Création dans le cadre d'un projet, sans utilisation commerciale.
 
+Textes et images provenant de https://www.floraquatic.com/
 
 
 ## Screenshots
