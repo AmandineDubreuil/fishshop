@@ -1,70 +1,221 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FishShop
 
-## Available Scripts
+Création d'un site e-commerce de vente de poissons d'ornement dans le cadre de ma formation en janvier 2023.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![App Screenshot](https://zupimages.net/up/23/02/afct.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![App Screenshot](https://zupimages.net/up/23/02/mqnj.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Copier le projet au format à partir du lien suivant :
+https://github.com/AmandineDubreuil/fishshop
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dézippez le dans votre dossier de travail.
 
-### `npm run eject`
+Installez les dépendances avec la commande suivante :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  npm update
+  cd fishshop
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm start
+  
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    
+    
+## Tech Stack
 
-## Learn More
+**Client:** ReactJS, JavaScript, HTML, CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Server:** NodeJS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Usage/Examples
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Création uniquement de la page d'articles et de la modale panier. Les autres composants ne sont actuelement pas créés.
 
-### Analyzing the Bundle Size
+- Création d'un menu
+![App Screenshot](https://zupimages.net/up/23/02/oxwf.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```javascript
+import MenuButton from "./MenuButton";
+import "./Menu.css";
 
-### Making a Progressive Web App
+class MenuEntries {
+  constructor(text, url) {
+    this.text = text;
+    this.url = url;
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  text = "";
+  url = "";
+}
 
-### Advanced Configuration
+//***3****
+const menuContent = [
+  new MenuEntries("Home", "https://github.com/"),
+  new MenuEntries(
+    "Poissons",
+    "https://www.figma.com/"
+  ),
+  new MenuEntries("Crevettes", "https://www.frontendmentor.io/"),
+  new MenuEntries("Panier", "https://github.com/"),
+];
+console.dir(menuContent);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+//***4****
+function displayMenu() {
+  document.querySelector(".innerMenu").classList.toggle("dNone");
+  document.querySelector(".innerMenu").classList.toggle("dBlock");
+}
+//***1****
+function Menu() {
+  return (
+    <div id="navbar">
+      <div className="logo"><span className="fish"> Fish</span>Shop</div>
+      <ul className="innerMenu dNone">
+        {/** boucle dans mon JSX pour afficher autant de boutons de menu que ce qu'il
+          y a dans le tableau menuContent */}
 
-### Deployment
+        {
+          /** utilise ***3*** */
+          menuContent.map((value) => {
+           
+            /** utilise ***2*** dans MenuButton*/
+            return <MenuButton texte={value.text} url={value.url} />;
+          })
+        }
+      </ul>
+      {/** utilise ***4*** */}
+      <div className="burger" onClick={displayMenu}>
+        <i className="fa-solid fa-bars"></i>
+      </div>
+      <div className="cartMenu"><i className="fa-solid fa-cart-shopping"></i></div>
+    </div>
+  );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Création d'une card (poisson d'aquarium) avec image, description et prix
+![App Screenshot](https://zupimages.net/up/23/02/pewr.png)
+
+```javascript
+
+import CardButton from "./CardButton";
+import "./Card.css";
+
+function Card(props) {
+
+  return (
+    <div className="card">
+      <div className="imgCard">
+        <img src={props.data.url} alt="" />
+      </div>
+      <div>
+        <div className="name">{props.data.name}</div>
+        <div className="description">{props.data.description}</div>
+        <div className="qte">
+          Attention ! plus que {props.data.qte} exemplaires en stock
+        </div>
+        <div className="buttonCardPrix">
+          <div className="prix">{props.data.price} € TTC</div>
+
+          <div className="buttonCard">
+            <CardButton qte={props.data.qte}></CardButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+```
+
+- Affichage des produits 
+![App Screenshot](https://zupimages.net/up/23/02/dwtd.png)
+
+
+```javascript
+import Card from "../Card/Card";
+import "./CardFrame.css";
+
+function CardFrame(props) {
+  return (
+    <div className="cardFrame">
+      {props.data.map((value) => {
+        return <Card data={value} />;
+      })}
+    </div>
+  );
+}
+```
+
+- Modale panier pour ajouter des produits et passer une commande
+
+![App Screenshot](https://zupimages.net/up/23/02/411e.png)
+
+```javascript
+const Panier = (props) => {
+  return (
+    <div className="backPanier">
+      <div className="panier">
+        <div className="closePanier">X</div>
+        <h2>FishShop vous remercie pour votre confiance</h2>
+        <div className="reassurance">
+        <div>
+          <i className="fa-solid fa-hand-holding-hand"></i> Protection du vivant
+        </div>
+        <div>
+          <i className="fa-solid fa-truck-fast"></i> Livraison rapide et soignée
+        </div>
+        <div><i className="fa-solid fa-lock"></i> Paiement sécurisé</div>
+      </div>
+
+        <h3>Détails de votre commande</h3>
+        <ul>{/*Boucle Map sur le panier*/}
+        <li>
+          
+            <div className="namePanier">nom de l'article{}</div>
+            <div className="generalQtePanier">
+                <div className="morePanier"> + </div>
+                <div className="qtePanier"> qté{} </div>
+                <div className="lessPanier"> - </div>
+                <div className="pricePanier"> {} € TTC </div>
+                <div className="removePanier"><i className="fa-solid fa-trash"></i></div>
+            </div>
+        </li>
+        </ul>
+        <div className="totalPanier">Total : {} € TTC</div>
+        <button className="buttonPanier">Valider la commande</button>
+
+      </div>
+    </div>
+  );
+};
+```
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Authors
+
+- [@AmandineDubreuil](https://www.github.com/AmandineDubreuil)
+
