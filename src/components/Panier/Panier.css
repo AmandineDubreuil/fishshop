@@ -1,0 +1,108 @@
+.backPanier {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.panier {
+  width: 80%;
+  height: 80vh;
+  position: relative;
+  padding: 0 3rem;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+  -moz-border-radius: 14px 14px 14px 14px;
+}
+.closePanier {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0.3rem;
+  background-color: rgb(93, 113, 35);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+}
+.panier h2{
+  padding: 2rem 0;
+  color: rgb(93, 113, 35);
+
+
+}
+.panier .reassurance{
+  color: #7e983280;
+}
+.panier h3 {
+  margin: 0;
+  padding-bottom: 1rem;
+  color: rgb(93, 113, 35);
+  border-bottom: 1px solid rgb(203, 229, 82);
+}
+.panier ul {
+  padding-left: 2rem;
+}
+.panier li {
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.generalQtePanier{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+.morePanier, .lessPanier, .removePanier{
+  padding: 0 0.3rem;
+  background-color: rgba(93, 113, 35, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+}
+.morePanier:hover, .lessPanier:hover, .removePanier:hover{
+  background-color: rgba(93, 113, 35,1);
+}
+.totalPanier{
+  padding-top: 2rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: end;
+
+}
+.buttonPanier {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  color: #000000 !important;
+  font-size: 14px;
+  text-shadow: 0px 1px 0px #5d7123;
+  box-shadow: 1px 1px 5px #000000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #5d7123;
+  background: linear-gradient(to top, #5d7123, #7e9832);
+}
+.buttonPanier:hover {
+  /*color: #b3b3b3 !important;*/
+  background: #28300f;
+  background: linear-gradient(to top, #28300f, #687d29);
+}

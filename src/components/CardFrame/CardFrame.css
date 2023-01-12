@@ -1,0 +1,15 @@
+.cardFrame{
+    padding-top: 3.5rem;
+}
+
+/* FORMAT Desktop */
+
+@media screen and (min-width: 576px) {
+  .cardFrame {
+    padding-top: 3.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,24 @@
+.reassurance{
+    padding: 1rem 0 0.5rem;
+    color: rgb(149,181,76);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+}
+.foot{
+    background-color: black;
+    color: white;
+    display: flex;
+justify-content: space-between;
+padding: 2rem 1rem 2rem;
+}
+.siteMap div{
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
+    font-weight: 100;
+}
+.reseaux{
+    width: 50%;
+    font-size: 1.25rem;
+    text-align: justify;
+}

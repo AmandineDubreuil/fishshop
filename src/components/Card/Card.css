@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  border: 0.5px solid lightgray;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.44);
+  box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.44);
+
+}
+.imgCard {
+  width: 90%;
+  height: 30vh;
+  overflow: hidden;
+  text-align: center;
+}
+.name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: rgb(93, 113, 35);
+}
+.description {
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.prix {
+  width: fit-content;
+  padding: 0.25rem;
+  color: rgb(149, 181, 76);
+}
+.qte{
+    padding: 1.5rem 0 0.5rem;
+}
+.buttonCardPrix {
+display: flex;
+justify-content: space-between;
+}
+.buttonCard button {
+  padding: 0.5rem;
+  background-color: #5d7123;
+  background-image: linear-gradient(
+    160deg,
+    #5d7123 0%,
+    #7e9832 50%,
+    #5d7123 100%
+  );
+  border: none;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+}
+
+/* FORMAT Desktop */
+@media screen and (min-width: 576px) {
+
+  .card{
+    width: 22%;
+  }
+
+}

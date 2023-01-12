@@ -1,0 +1,82 @@
+#navbar {
+  position: fixed;
+  display: flex;
+  background-color: rgb(0,0,0);
+  color: white;
+  width: 100%;
+  -webkit-box-shadow: 0px 17px 9px -8px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 17px 9px -8px rgba(0, 0, 0, 0.43);
+}
+.logo {
+  padding: 0.8rem;
+}
+.burger, .cartMenu {
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+.cartMenu{
+  position: absolute;
+  right: 1rem;
+}
+.innerMenu {
+  position: absolute;
+  background-color: white;
+  top: 1.9rem;  
+  padding: 0;
+  -webkit-box-shadow: 5px 5px 8px -7px #000000; 
+box-shadow: 5px 5px 8px -7px #000000;
+}
+.innerMenu li {
+  list-style-type: none;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid rgb(149, 181, 76);
+
+}
+.innerMenu li:hover{
+  background-color: rgb(149, 181, 76);
+}
+.innerMenu a{
+  color: black;
+  text-decoration: none;
+}
+
+.dNone {
+  display: none;
+}
+.dBlock {
+  display: block;
+}
+.dFlex {
+  display: flex;
+}
+
+/* format desktop */
+
+@media screen and (min-width: 576px) {
+  #navbar{
+    justify-content: space-between;
+  }
+  .cartMenu{
+    position: relative;
+  }
+  .innerMenu {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: auto;
+    background-color: rgb(0,0,0);
+    margin: 0;
+  }
+  .innerMenu li {
+    display: block;
+    border-bottom: none;
+  }
+  .innerMenu a{
+    color: white;
+
+  }
+  .burger {
+    display: none;
+  }
+}

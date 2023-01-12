@@ -1,0 +1,14 @@
+/*
+1 modale pour tout couvrir
+
+    1 élément 80vh 80 vw 
+        1 titre du panier
+        1 liste éléments du panier
+            boucle avec 
+                nom
+                + qté -
+                prix
+            bouton delete
+        total
+        bouton acheter
+*/
