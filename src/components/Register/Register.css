@@ -1,0 +1,141 @@
+/* background modale register */
+.backRegister {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none;*/
+}
+
+/*  modale register */
+
+.register {
+  width: 80%;
+  position: relative;
+  padding: 0 3rem;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+  -moz-border-radius: 14px 14px 14px 14px;
+
+}
+.closeRegister {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0.3rem;
+  background-color: rgb(93, 113, 35);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+}
+.register h2 {
+  padding: 2rem 0;
+  color: rgb(93, 113, 35);
+}
+
+/* formulaire register */
+.register form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#email,
+#password,
+#confpassword,
+#nom,
+#prenom {
+  padding: 0.5rem;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+}
+.register input::placeholder {
+  color: rgb(103, 103, 103);
+  font-size: 0.9rem;
+}
+/* nom prenom */
+.nomPrenom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#nom,
+#prenom {
+  width: 40%;
+}
+/* mail */
+#email {
+    margin-top: 1rem;
+  width: 60%;
+}
+/* mot de passe */
+.pwdGroup {
+  margin: 1rem 0;
+}
+#password,
+#confpassword {
+  width: 45%;
+}
+.register form p {
+  margin-top: 0;
+  color: rgb(150, 150, 150);
+  font-size: 0.8rem;
+}
+
+
+/* cgu */
+.cguGroup {
+  margin-top: 1rem;
+  color: rgb(103, 103, 103);
+  font-size: 0.9rem;
+}
+.cguGroup a {
+  color: rgb(103, 103, 103);
+}
+/* bouton submit register */
+.submit {
+margin: 1rem;
+    display: flex;
+    width: 100%;
+justify-content: center;
+}
+
+.submit input {
+    
+  color: #000000 !important;
+  font-size: 14px;
+  text-shadow: 0px 1px 0px #5d7123;
+  box-shadow: 1px 1px 5px #000000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #5d7123;
+  background: linear-gradient(to top, #5d7123, #7e9832);
+}
+.submit input:hover {
+  background: #28300f;
+  background: linear-gradient(to top, #28300f, #687d29);
+}
+/* sign in */
+.signIn {
+    color: rgb(103, 103, 103);
+}
+.signIn a{
+    color: rgb(93, 113, 35);
+
+}
+

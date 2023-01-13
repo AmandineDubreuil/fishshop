@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "./components/Menu/Menu";
 import CardFrame from "./components/CardFrame/CardFrame";
 import Panier from "./components/Panier/Panier";
+import Register from "./components/Register/Register";
 import Footer from "./components/Footer/Footer";
 import articles from "./articles";
 import "./Root.css";
@@ -18,6 +19,7 @@ class Root extends React.Component {
   render() {
     return (
       <>
+      <Register></Register>
         <Panier></Panier>
         <header>
           <Menu></Menu>
