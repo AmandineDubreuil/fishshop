@@ -13,15 +13,12 @@ class MenuEntries {
 
 //***3****
 const menuContent = [
-  new MenuEntries("Home", "https://github.com/"),
-  new MenuEntries(
-    "Poissons",
-    "https://www.figma.com/files/recent?fuid=1174996308659282942"
-  ),
-  new MenuEntries("Crevettes", "https://www.frontendmentor.io/"),
-  new MenuEntries("Panier", "https://github.com/"),
+  new MenuEntries("Home", ""),
+  new MenuEntries("Poissons", ""),
+  new MenuEntries("Crevettes", ""),
+  new MenuEntries("Panier"),
 ];
-console.dir(menuContent);
+//console.dir(menuContent);
 
 //***4****
 function displayMenu() {
@@ -29,10 +26,12 @@ function displayMenu() {
   document.querySelector(".innerMenu").classList.toggle("dBlock");
 }
 //***1****
-function Menu() {
+function Menu(props) {
   return (
     <div id="navbar">
-      <div className="logo"><span className="fish"> Fish</span>Shop</div>
+      <div className="logo">
+        <span className="fish"> Fish</span>Shop
+      </div>
       <ul className="innerMenu dNone">
         {/** boucle dans mon JSX pour afficher autant de boutons de menu que ce qu'il
           y a dans le tableau menuContent */}
@@ -55,7 +54,9 @@ function Menu() {
       <div className="burger" onClick={displayMenu}>
         <i className="fa-solid fa-bars"></i>
       </div>
-      <div className="cartMenu"><i className="fa-solid fa-cart-shopping"></i></div>
+      <div className="cartMenu">
+        <i className="fa-solid fa-cart-shopping"></i>
+      </div>
     </div>
   );
 }

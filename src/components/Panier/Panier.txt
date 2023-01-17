@@ -12,3 +12,17 @@
         total
         bouton acheter
 */
+
+class : à l'intérieur c'est des propriétés
+class MaDiv extends React.Component {  => ca veut dire je donne à MeDiv LES composents React
+
+    texte = "Hello world"  => c'est une propriétés
+    handleclick() {
+        alert ("click") => c'est une méthode
+    }
+render()
+
+return(
+    <DIV>{this.texte} </div>
+)
+}}
