@@ -18,7 +18,7 @@ function Card(props) {
           <div className="prix">{props.data.price} € TTC</div>
 
           <div className="buttonCard">
-            <CardButton qte={props.data.qte}></CardButton>
+            <CardButton id={props.data.id}></CardButton>
           </div>
         </div>
       </div>

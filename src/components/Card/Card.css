@@ -9,11 +9,10 @@
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.44);
   box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.44);
-
 }
 .imgCard {
-  width: 90%;
- /* height: 30vh;*/
+  width: 100%;
+  /* height: 30vh;*/
   overflow: hidden;
   text-align: center;
 }
@@ -33,35 +32,34 @@
   padding: 0.25rem;
   color: rgb(149, 181, 76);
 }
-.qte{
-    padding: 1.5rem 0 0.5rem;
+.qte {
+  padding: 1.5rem 0 0.5rem;
 }
 .buttonCardPrix {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .buttonCard button {
   padding: 0.5rem;
-  background-color: #5d7123;
-  background-image: linear-gradient(
-    160deg,
-    #5d7123 0%,
-    #7e9832 50%,
-    #5d7123 100%
-  );
+  background: #5d7123;
+  background: linear-gradient(to top, #5d7123, #7e9832);
   border: none;
   border-radius: 7px 7px 7px 7px;
   -webkit-border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
 }
 
+.buttonCard button:hover {
+  /*color: #b3b3b3 !important;*/
+  background: #28300f;
+  background: linear-gradient(to top, #28300f, #687d29);
+}
+
+
 /* FORMAT Desktop */
 @media screen and (min-width: 576px) {
-
-  .card{
+  .card {
     width: 22%;
     min-width: 230px;
-
   }
-
 }

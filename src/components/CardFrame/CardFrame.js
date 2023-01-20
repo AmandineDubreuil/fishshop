@@ -4,8 +4,8 @@ import "./CardFrame.css";
 function CardFrame(props) {
   return (
     <div className="cardFrame">
-      {props.data.map((value) => {
-        return <Card data={value} />;
+      {props.data.map((value, i) => {
+        return <Card key={i} data={value} />;
       })}
     </div>
   );

@@ -13,9 +13,9 @@ class MenuEntries {
 
 //***3****
 const menuContent = [
-  new MenuEntries("Home", ""),
-  new MenuEntries("Poissons", ""),
-  new MenuEntries("Crevettes", ""),
+  new MenuEntries("Poissons"),
+  new MenuEntries("Crevettes"),
+  new MenuEntries("Connexion"),
   new MenuEntries("Panier"),
 ];
 //console.dir(menuContent);
@@ -38,12 +38,12 @@ function Menu(props) {
 
         {
           /** utilise ***3*** */
-          menuContent.map((value) => {
+          menuContent.map((value, i) => {
             /* pour retourner à nouveau du JSX je dois dans ma fonction
           callback utiliser un return*/
 
             /** utilise ***2*** dans MenuButton*/
-            return <MenuButton texte={value.text} url={value.url} />;
+            return <MenuButton key={i} texte={value.text} url={value.url} />;
           })
         }
       </ul>
