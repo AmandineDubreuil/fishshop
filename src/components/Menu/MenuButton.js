@@ -18,7 +18,8 @@ function MenuButton(props) {
 
       }}>
       <a href={props.url}>{props.texte} 
-      {props.texte==="Panier" && boutiqueContext.panier.length>0 ? <sup className="pill">{boutiqueContext.panier.length}</sup> : <></>}
+      {props.texte==="Panier" && boutiqueContext.panier.length>0 ? 
+      <sup className="pill">{boutiqueContext.panier.length}</sup> : <></>}
       </a>
     </li>
   );

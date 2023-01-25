@@ -1,7 +1,9 @@
 
 # FishShop
 
-E-shop to sell ornamental fishes created with React Js during my classroom "Developper Web and Mobile Web" in January 2023.
+Responsive E-shop to sell ornamental fishes created with React Js during my  "Developper Web and Mobile Web" training in January 2023.
+
+Menu, Item cards, Register form, Cart 
 
 Created for a project, without commercial use.
 
@@ -46,7 +48,6 @@ Install with the command below :
 
 ## Usage/Examples
 
-I only have created the articles sheet and the cart modal. The other components are not created yet.
 
 - Menu creation
 ![App Screenshot](https://zupimages.net/up/23/02/oxwf.png)
@@ -319,7 +320,7 @@ const Panier = (props) => {
                         {(Math.round((article.price * qteDisplay)*100)/100)} € TTC{" "}
                       </div>
 
-                      <div className="removePanier"> {/*onClick={boutiqueContext.removeAll(value)} */}
+                      <div className="removePanier"> 
                         <i className="fa-solid fa-trash"></i>
                       </div>
                     </div>
@@ -331,7 +332,7 @@ const Panier = (props) => {
                 qteTmp++;
               }
 
-              //console.dir(boutiqueContext.data[value]);
+              
             })}
           </ul>
           <div className="totalPanier">
